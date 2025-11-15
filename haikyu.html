@@ -9,56 +9,280 @@
       font-family: "Noto Sans JP", sans-serif;
       background-color: #fffafc;
       padding: 20px;
+      margin: 0;
     }
+
     h1 {
       color: #ff884d;
       text-align: center;
+      margin-bottom: 30px;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      background: white;
-      border-radius: 10px;
-      padding: 10px;
-      margin: 8px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    a.back {
+
+    .back {
       display: block;
-      margin-top: 20px;
+      margin-top: 30px;
       text-align: center;
       color: #555;
       text-decoration: none;
+      font-weight: bold;
     }
+
+    /* ---- 折りたたみカード ---- */
+    .maker-card {
+      background: white;
+      border-radius: 18px;
+      margin: 12px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .maker-header {
+      padding: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ff884d;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .maker-header:hover {
+      background: #fff0e8;
+    }
+
+    .toggle-icon {
+      font-size: 1.4rem;
+      transition: transform 0.3s;
+    }
+
+    .maker-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 15px;
+    }
+
+    .maker-content.open {
+      padding: 15px;
+    }
+
+    /* 特設サイトボタン */
+    .special-btn {
+      display: inline-block;
+      padding: 8px 14px;
+      background-color: #ff884d;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .goods-image {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
   </style>
 </head>
 <body>
-  <h1>ハイキュー!! グッズ情報</h1>
 
-  <div class="official">
-    <h2>JF公式ショップ</h2>
-    <p><a href="http://jumpfesta.com/shop/048_hky_bag/">ショッピングバッグ</a></p>
-    <p><a href="https://www.jumpfesta.com/shop/049_hky_metalkh/">RUNメタルキーホルダーコレクション 第1弾</a></p>
+<h1>ハイキュー!! グッズ情報</h1>
+
+<div class="maker-card">
+  <div class="maker-header">
+    ジャンプショップ
+    <span class="toggle-icon">＋</span>
   </div>
-
-  <div class="その他">
-    <h2>タカラトミー</h2>
-    <h2>TOHO animation</h2>
-    <h2>FuRyu</h2>
-    <h2>メガハウス</h2>
-    <h2>ジロリ</h2>
-    <h2>アニメイト</h2>
-    <h2>AMNIBUS</h2>
-    <h2>eco Store</h2>
-    <h2>きゃらあに</h2>
-    <h2>theキャラ</h2>
-    <h2>ショウワノート</h2>
-    <h2>中外鉱業</h2>
-    <h2>メディコス・エンターテインメント</h2>
+  <div class="maker-content">
+    <a href="https://www.jumpfesta.com/shop/" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="image/haikyu_1.png" alt="グッズ画像" class="goods-image">
+    <img src="image/haikyu_2.png" alt="グッズ画像" class="goods-image">
   </div>
+</div>
 
-  <a class="back" href="index.html">← メインページに戻る</a>
+<div class="maker-card">
+  <div class="maker-header">
+    タカラトミー
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://www.takaratomy-arts.co.jp/campaign/e/119/" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="image/takara_haikyu.png" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    TOHO animation★
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://example.com/animate-special" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="images/animate.jpg" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    FuRyu★
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://example.com/animate-special" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="images/animate.jpg" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    メガハウス★
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://megahobbyexpo.jp/jf2026/" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="images/animate.jpg" alt="TOHOグッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    ジロリ★
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://megahobbyexpo.jp/jf2026/" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="images/animate.jpg" alt="TOHOグッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    アニメイト
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://www.movic.jp/shop/pages/jf2026.aspx" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="image/anime_haikyu.png" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    AMUNIBUS★
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://www.movic.jp/shop/pages/jf2026.aspx" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="image/anime_haikyu.png" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    eco Store★
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://www.movic.jp/shop/pages/jf2026.aspx" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="image/anime_haikyu.png" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    きゃらあに★
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://www.chara-ani.com/pickup.aspx?p=cawj" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="image/anime_haikyu.png" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    theキャラ★
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://www.movic.jp/shop/pages/jf2026.aspx" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="image/anime_haikyu.png" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    ショウワノート★
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://www.movic.jp/shop/pages/jf2026.aspx" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="image/anime_haikyu.png" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    中外鉱業
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://www.chugai-contents.jp/blog/event/jf2026/" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="image/tyuugai_haikyu.png" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<div class="maker-card">
+  <div class="maker-header">
+    メディコス・エンターテインメント★
+    <span class="toggle-icon">＋</span>
+  </div>
+  <div class="maker-content">
+    <a href="https://www.movic.jp/shop/pages/jf2026.aspx" target="_blank" class="special-btn">特設サイトを見る</a>
+    <br>
+    <img src="image/anime_haikyu.png" alt="グッズ画像" class="goods-image">
+  </div>
+</div>
+
+<a class="back" href="index.html">← メインページに戻る</a>
+
+<script>
+  // 折りたたみ動作
+  document.querySelectorAll('.maker-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.toggle-icon');
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        content.classList.remove("open");
+        icon.textContent = "＋";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.classList.add("open");
+        icon.textContent = "－";
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
